@@ -1,0 +1,17 @@
+# Copyright (C) 2025 Roberto Rossini <roberros@uio.no>
+#
+# SPDX-License-Identifier: MIT
+
+# Ignored directories
+.cache/
+*.egg-info/
+.idea/
+.run/
+.vscode/
+__pycache__/
+scratch/
+test/data
+venv/
+
+# Ignored files
+*.bak
