@@ -68,6 +68,7 @@ def _make_cli() -> argparse.ArgumentParser:
     cli.add_argument(
         "--ncpus",
         type=_positive_int,
+        required=True,
         help="Maximum number of CPUs to use.",
     )
 
