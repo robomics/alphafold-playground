@@ -270,9 +270,9 @@ def main() -> int:
             _generate_sbatch_script(
                 args=colabfold_search_args,
                 num_cpus=args["ncpus"],
-                memory_gbs=10,
+                memory_gbs=120,
                 max_time="08:00:00",
-                partition="normal",
+                partition="bigmem",
                 job_name=args["job_name"],
             )
         )
