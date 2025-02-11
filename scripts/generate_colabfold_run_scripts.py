@@ -247,7 +247,9 @@ def main() -> int:
     )
 
     if not args["force"] and args["output-folder"].exists() and not _directory_is_empty(args["output-folder"]):
-        raise RuntimeError(f"Refusing to non-empty folder \"{args['output-folder']}\". Pass --force to overwrite.")
+        raise RuntimeError(
+            f"Refusing to write to non-empty folder \"{args['output-folder']}\". Pass --force to overwrite."
+        )
 
     colabfold_search_script = args["output-folder"] / "run_colabfold_search.sh"
     colabfold_batch_script = args["output-folder"] / "run_colabfold_batch.sh"
