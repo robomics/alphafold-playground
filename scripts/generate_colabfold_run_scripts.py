@@ -187,9 +187,6 @@ def _generate_sbatch_script(
 
     lines = [
         "#!/usr/bin/env bash",
-        "set -e",
-        "set -u",
-        "set -o pipefail",
         "",
     ]
 
@@ -209,6 +206,16 @@ def _generate_sbatch_script(
         sbatch_directives.append(f"#SBATCH --partition={shlex.quote(partition)}"),
 
     lines.extend(sorted(sbatch_directives))
+
+    lines.extend(
+        (
+            "",
+            "set -e",
+            "set -u",
+            "set -o pipefail",
+            "",
+        )
+    )
 
     lines.extend(
         (
