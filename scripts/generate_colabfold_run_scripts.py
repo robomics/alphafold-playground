@@ -123,7 +123,7 @@ def _generate_colabfold_search_args(
         str(colabfold_search_output_folder),
     ]
 
-    return args, colabfold_search_output_folder
+    return args, output_folder_src / "search"
 
 
 def _generate_colabfold_batch_args(
